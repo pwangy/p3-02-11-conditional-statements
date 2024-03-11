@@ -4,11 +4,14 @@
   return "Access granted". Otherwise, return "Access denied".
 */
 function adminLogin(username, password) {
-  if ((username === "admin" || username === "ADMIN") && password === "12345") {
-    return "Access granted";
-  } else {
-    return "Access denied";
-  }
+	if (
+		(username === 'admin' || username === 'ADMIN') &&
+		password === '12345'
+	) {
+		return 'Access granted'
+	} else {
+		return 'Access denied'
+	}
 }
 
 /*
@@ -18,17 +21,17 @@ function adminLogin(username, password) {
   return "It's too dang hot out there!". Otherwise, return "It's perfect out there!"
 */
 function howsTheWeather(temperature) {
-  let response;
-  if (temperature < 40) {
-    response = "brisk";
-  } else if (temperature >= 40 && temperature <= 65) {
-    response = "a little chilly";
-  } else if (temperature > 85) {
-    response = "too dang hot";
-  } else {
-    response = "perfect";
-  }
-  return `It's ${response} out there!`;
+	let response
+	if (temperature < 40) {
+		response = 'brisk'
+	} else if (temperature >= 40 && temperature <= 65) {
+		response = 'a little chilly'
+	} else if (temperature > 85) {
+		response = 'too dang hot'
+	} else {
+		response = 'perfect'
+	}
+	return `It's ${response} out there!`
 }
 
 /* 
@@ -38,15 +41,15 @@ function howsTheWeather(temperature) {
   all other numbers, just return the number itself.
 */
 function fizzbuzz(num) {
-  if (num % 3 === 0 && num % 5 === 0) {
-    return "FizzBuzz";
-  } else if (num % 3 === 0) {
-    return "Fizz";
-  } else if (num % 5 === 0) {
-    return "Buzz";
-  } else {
-    return num;
-  }
+	if (num % 3 === 0 && num % 5 === 0) {
+		return 'FizzBuzz'
+	} else if (num % 3 === 0) {
+		return 'Fizz'
+	} else if (num % 5 === 0) {
+		return 'Buzz'
+	} else {
+		return num
+	}
 }
 
 /*
@@ -56,16 +59,16 @@ function fizzbuzz(num) {
   output a message saying "Invalid operation!" and return `nil`.
 */
 function calculator(operation, num1, num2) {
-  switch (operation) {
-    case "+":
-      return num1 + num2;
-    case "-":
-      return num1 - num2;
-    case "*":
-      return num1 * num2;
-    case "/":
-      return num1 / num2;
-    default:
-      console.log("Invalid operation!");
-  }
+	switch (operation) {
+		case '+':
+			return num1 + num2
+		case '-':
+			return num1 - num2
+		case '*':
+			return num1 * num2
+		case '/':
+			return num1 / num2
+		default:
+			console.log('Invalid operation!')
+	}
 }
